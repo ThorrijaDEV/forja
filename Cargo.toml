@@ -1,0 +1,7 @@
+[package]
+name = "forja"
+version = "0.1.0"
+edition = "2021"
+description = "Mini-compilador que traduce un lenguaje de alto nivel a ensamblador SILICON (CPU de 8 bits)"
+
+[dependencies]

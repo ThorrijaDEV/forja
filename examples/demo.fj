@@ -1,0 +1,20 @@
+# Demo de Forja: cuenta 0..9, imprime 255 y demuestra if/else.
+var i:u8
+var n:u8
+i = 0
+while i < 10 {
+    print_num(i)
+    print_str(" ")
+    i = i + 1
+}
+print_str("\nnumero maximo: ")
+n = 255
+n = n & 255
+print_num(n)
+print_str("\n")
+if i == 10 {
+    print_str("diez alcanzado\n")
+} else {
+    print_str("fallo\n")
+}
+halt()

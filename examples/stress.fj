@@ -1,0 +1,28 @@
+# Tormenta de expresiones anidadas, comparaciones complejas y envueltas u8.
+var i:u8
+var j:u8
+var acc:u8
+i = 0
+j = 1
+acc = 0
+# condicion compleja: i < j + 1  (usa temporal _cmp)
+while i < (j + 1) {
+    # operando derecho anidado (usa PSH/POP + _tmp)
+    acc = acc + (1 + 1)
+    print_num(acc)
+    print_str("\n")
+    i = i + 1
+}
+# envuelta aritmetica: 255 + 1 = 0 (mod 256)
+acc = 255
+acc = acc + 1
+print_str("wrap: ")
+print_num(acc)
+print_str("\n")
+# comparacion con expresion compleja en ambos lados: i == (i + 1 - 1)
+if (i + 0) == (i + 1 - 1) {
+    print_str("cmp ok\n")
+} else {
+    print_str("cmp fail\n")
+}
+halt()
